@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="fabulator:gpx-builder" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v2 https://www8.garmin.com/xmlschemas/TrackPointExtensionv2.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 https://www8.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v2" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+  <trk>
+    <trkseg>
+      <trkpt lat="-25.0533557" lon="-47.9126903">
+        <time>2025-01-26T11:56:58.000Z</time>
+        <sym>2 a 10 botos</sym>
+      </trkpt>
+      <trkpt lat="-25.056239" lon="-47.9116643">
+        <time>2025-01-26T12:01:23.000Z</time>
+        <sym>2 a 10 botos</sym>
+      </trkpt>
+      <trkpt lat="-25.0574049" lon="-47.9122889">
+        <time>2025-01-26T12:03:12.000Z</time>
+        <sym>2 a 10 botos</sym>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

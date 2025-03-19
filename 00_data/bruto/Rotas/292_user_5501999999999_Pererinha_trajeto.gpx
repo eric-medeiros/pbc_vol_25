@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2025-03-19T13:45:53Z</time>
+    <bounds maxlat="-25.013337135314941" maxlon="-47.926856400445104" minlat="-25.013473341241479" minlon="-47.92699595913291" />
+  </metadata>
+
+  <trk>
+    <name>Pista</name>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>DarkGray</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="-25.013337135314941" lon="-47.926894119009376">
+        <time>2025-01-30T20:31:44Z</time>
+      </trkpt>
+      <trkpt lat="-25.013342332094908" lon="-47.926861764863133">
+        <time>2025-01-30T20:31:47Z</time>
+      </trkpt>
+      <trkpt lat="-25.013345768675208" lon="-47.926859417930245">
+        <time>2025-01-30T20:31:53Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335272565484" lon="-47.926856400445104">
+        <time>2025-01-30T20:32:07Z</time>
+      </trkpt>
+      <trkpt lat="-25.013352809473872" lon="-47.926856400445104">
+        <time>2025-01-30T20:32:13Z</time>
+      </trkpt>
+      <trkpt lat="-25.013351971283555" lon="-47.926858412101865">
+        <time>2025-01-30T20:32:38Z</time>
+      </trkpt>
+      <trkpt lat="-25.013351887464523" lon="-47.926858495920897">
+        <time>2025-01-30T20:32:38Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335222274065" lon="-47.926858412101865">
+        <time>2025-01-30T20:33:24Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335222274065" lon="-47.926858412101865">
+        <time>2025-01-30T20:33:25Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335222274065" lon="-47.926858412101865">
+        <time>2025-01-30T20:33:25Z</time>
+      </trkpt>
+      <trkpt lat="-25.013473341241479" lon="-47.92699595913291">
+        <time>2025-01-30T20:33:26Z</time>
+      </trkpt>
+      <trkpt lat="-25.013346271589398" lon="-47.926886240020394">
+        <time>2025-01-30T20:33:37Z</time>
+      </trkpt>
+      <trkpt lat="-25.013345936313272" lon="-47.926870230585337">
+        <time>2025-01-30T20:33:42Z</time>
+      </trkpt>
+      <trkpt lat="-25.013355491682887" lon="-47.926859082654119">
+        <time>2025-01-30T20:34:06Z</time>
+      </trkpt>
+      <trkpt lat="-25.013349875807762" lon="-47.926872493699193">
+        <time>2025-01-30T20:35:06Z</time>
+      </trkpt>
+      <trkpt lat="-25.013349875807762" lon="-47.926872493699193">
+        <time>2025-01-30T20:35:12Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335121691227" lon="-47.926872912794352">
+        <time>2025-01-30T20:35:12Z</time>
+      </trkpt>
+      <trkpt lat="-25.013351300731301" lon="-47.926875427365303">
+        <time>2025-01-30T20:36:22Z</time>
+      </trkpt>
+      <trkpt lat="-25.013351384550333" lon="-47.92687525972724">
+        <time>2025-01-30T20:36:22Z</time>
+      </trkpt>
+      <trkpt lat="-25.013351384550333" lon="-47.926875092089176">
+        <time>2025-01-30T20:36:27Z</time>
+      </trkpt>
+      <trkpt lat="-25.013352306559682" lon="-47.926875678822398">
+        <time>2025-01-30T20:36:32Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335222274065" lon="-47.926875595003366">
+        <time>2025-01-30T20:36:42Z</time>
+      </trkpt>
+      <trkpt lat="-25.013352306559682" lon="-47.926875678822398">
+        <time>2025-01-30T20:36:43Z</time>
+      </trkpt>
+      <trkpt lat="-25.013352474197745" lon="-47.926875678822398">
+        <time>2025-01-30T20:36:52Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335272565484" lon="-47.926875930279493">
+        <time>2025-01-30T20:36:57Z</time>
+      </trkpt>
+      <trkpt lat="-25.013354821130633" lon="-47.926877019926906">
+        <time>2025-01-30T20:38:01Z</time>
+      </trkpt>
+      <trkpt lat="-25.013357838615775" lon="-47.926878277212381">
+        <time>2025-01-30T20:38:16Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335758715868" lon="-47.92687869630754">
+        <time>2025-01-30T20:38:17Z</time>
+      </trkpt>
+      <trkpt lat="-25.013358760625124" lon="-47.926879785954952">
+        <time>2025-01-30T20:38:22Z</time>
+      </trkpt>
+      <trkpt lat="-25.013380805030465" lon="-47.926866291090846">
+        <time>2025-01-30T20:45:34Z</time>
+      </trkpt>
+      <trkpt lat="-25.013383571058512" lon="-47.926864782348275">
+        <time>2025-01-30T20:45:42Z</time>
+      </trkpt>
+      <trkpt lat="-25.013384660705924" lon="-47.926862686872482">
+        <time>2025-01-30T20:45:42Z</time>
+      </trkpt>
+      <trkpt lat="-25.013384660705924" lon="-47.926862770691514">
+        <time>2025-01-30T20:45:51Z</time>
+      </trkpt>
+      <trkpt lat="-25.013384995982051" lon="-47.926862603053451">
+        <time>2025-01-30T20:45:52Z</time>
+      </trkpt>
+      <trkpt lat="-25.013386169448495" lon="-47.926861429587007">
+        <time>2025-01-30T20:46:07Z</time>
+      </trkpt>
+      <trkpt lat="-25.013386169448495" lon="-47.926861261948943">
+        <time>2025-01-30T20:46:11Z</time>
+      </trkpt>
+      <trkpt lat="-25.013387762010098" lon="-47.926861429587007">
+        <time>2025-01-30T20:46:55Z</time>
+      </trkpt>
+      <trkpt lat="-25.013387426733971" lon="-47.92686159722507">
+        <time>2025-01-30T20:46:55Z</time>
+      </trkpt>
+      <trkpt lat="-25.013377284631133" lon="-47.926860172301531">
+        <time>2025-01-30T20:47:11Z</time>
+      </trkpt>
+      <trkpt lat="-25.013363705947995" lon="-47.926865871995687">
+        <time>2025-01-30T20:47:23Z</time>
+      </trkpt>
+      <trkpt lat="-25.01335758715868" lon="-47.92686796747148">
+        <time>2025-01-30T20:47:28Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371584936976" lon="-47.926883976906538">
+        <time>2025-01-30T20:47:38Z</time>
+      </trkpt>
+      <trkpt lat="-25.013372674584389" lon="-47.926887329667807">
+        <time>2025-01-30T20:48:03Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371333479881" lon="-47.926886491477489">
+        <time>2025-01-30T20:48:28Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371333479881" lon="-47.926886575296521">
+        <time>2025-01-30T20:48:28Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369573280215" lon="-47.926887832581997">
+        <time>2025-01-30T20:48:40Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369573280215" lon="-47.926887832581997">
+        <time>2025-01-30T20:48:45Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369573280215" lon="-47.926887916401029">
+        <time>2025-01-30T20:48:45Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369489461184" lon="-47.926887916401029">
+        <time>2025-01-30T20:48:50Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369573280215" lon="-47.926888167858124">
+        <time>2025-01-30T20:48:55Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369740918279" lon="-47.926888419315219">
+        <time>2025-01-30T20:49:01Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369573280215" lon="-47.926888419315219">
+        <time>2025-01-30T20:49:10Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369740918279" lon="-47.926888335496187">
+        <time>2025-01-30T20:49:11Z</time>
+      </trkpt>
+      <trkpt lat="-25.01336982473731" lon="-47.926888419315219">
+        <time>2025-01-30T20:49:20Z</time>
+      </trkpt>
+      <trkpt lat="-25.01336982473731" lon="-47.926888838410378">
+        <time>2025-01-30T20:49:25Z</time>
+      </trkpt>
+      <trkpt lat="-25.013369908556342" lon="-47.926888838410378">
+        <time>2025-01-30T20:49:30Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370160013437" lon="-47.926889341324568">
+        <time>2025-01-30T20:49:35Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370076194406" lon="-47.926889341324568">
+        <time>2025-01-30T20:49:40Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370160013437" lon="-47.926889341324568">
+        <time>2025-01-30T20:49:45Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370327651501" lon="-47.926889676600695">
+        <time>2025-01-30T20:49:50Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370160013437" lon="-47.926890263333917">
+        <time>2025-01-30T20:49:55Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370160013437" lon="-47.926890263333917">
+        <time>2025-01-30T20:50:05Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370160013437" lon="-47.92689043097198">
+        <time>2025-01-30T20:50:06Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370076194406" lon="-47.926890682429075">
+        <time>2025-01-30T20:50:15Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370160013437" lon="-47.926891269162297">
+        <time>2025-01-30T20:50:16Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370662927628" lon="-47.926891688257456">
+        <time>2025-01-30T20:50:20Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370411470532" lon="-47.926891688257456">
+        <time>2025-01-30T20:50:25Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370579108596" lon="-47.926892023533583">
+        <time>2025-01-30T20:50:30Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370662927628" lon="-47.926892191171646">
+        <time>2025-01-30T20:50:35Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370579108596" lon="-47.926892526447773">
+        <time>2025-01-30T20:50:40Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370662927628" lon="-47.926893029361963">
+        <time>2025-01-30T20:50:45Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371082022786" lon="-47.926893616095185">
+        <time>2025-01-30T20:51:13Z</time>
+      </trkpt>
+      <trkpt lat="-25.013370998203754" lon="-47.926894035190344">
+        <time>2025-01-30T20:51:13Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371165841818" lon="-47.926894538104534">
+        <time>2025-01-30T20:51:18Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371165841818" lon="-47.926894538104534">
+        <time>2025-01-30T20:51:23Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371165841818" lon="-47.926894789561629">
+        <time>2025-01-30T20:51:28Z</time>
+      </trkpt>
+      <trkpt lat="-25.013371165841818" lon="-47.926895208656788">
+        <time>2025-01-30T20:51:39Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>
