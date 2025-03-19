@@ -1,0 +1,244 @@
+---
+title: "Resumo"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(here)
+library(DT)
+library(stringr)
+library(ggplot2)
+library(plotly)
+library(leaflet)
+
+source(here("01_scripts", "le_excel.R"))
+source(here("01_scripts", "le_trajetos.R"))
+
+caminho_pasta_excel <- here("00_data", "bruto", "Answers")
+caminho_pasta_rotas <- here("00_data", "bruto", "Rotas")
+
+dados_quest <- le_excel(caminho_pasta_excel)
+dados_trajetos <- le_trajetos(caminho_pasta_rotas)
+```
+
+
+# Perguntas
+
+### Perguntas 1
+
+```{r}
+dados_quest$quest_1 %>% group_by(ID_pergunta) %>% count(Question) %>% datatable()
+```
+
+### Perguntas 2
+
+```{r}
+dados_quest$quest_2 %>% group_by(ID_pergunta) %>% count(Question) %>% datatable()
+```
+
+# Respostas 1
+
+## {.tabset}
+
+### 1/1
+```{r}
+g1 <- 
+  dados_quest$quest_1 %>%
+  filter(ID_pergunta == 1) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Desejo não responder" ~ 1,
+    Answer == "⭐️⭐️⭐️" ~ 2,
+    Answer == "⭐️⭐️⭐️⭐️" ~ 3,
+    Answer == "⭐️⭐️⭐️⭐️⭐️" ~ 4,
+    TRUE ~ NA_real_
+  )) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Quanto você vê de importância do boto-cinza para o turismo em Cananéia?") +
+  theme_minimal()
+
+ggplotly(g1)
+```
+
+### 2/1
+```{r}
+g2 <- 
+  dados_quest$quest_1 %>%
+  filter(ID_pergunta == 2) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Desejo não responder" ~ 1,
+    Answer == "Não" ~ 2,
+    Answer == "Sim" ~ 3,
+    TRUE ~ NA_real_)) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Se tivesse um passeio exclusivo para ver botos-cinza, você estaria disposto a fazê-lo?") +
+  theme_minimal()
+
+ggplotly(g2)
+```
+
+### 3/1
+```{r}
+g3 <- 
+  dados_quest$quest_1 %>%
+  filter(ID_pergunta == 3) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Desejo não responder" ~ 1,
+    Answer == "Vi escunas fazendo manobras que ameaçam botos e pessoas" ~ 2,
+    Answer == "Vi voadeiras fazendo manobras que ameaçam botos e pessoas" ~ 3,
+    Answer == "Vi jetsky fazendo manobras que ameaçam botos e pessoas" ~ 4,
+    Answer == "Não vi condutas inapropriadas" ~ 5,
+    TRUE ~ NA_real_)) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Na sua percepção, como foi a conduta das embarcações que você viu (no canal, no píer, praia ou outro local)?") +
+  theme_minimal()
+
+ggplotly(g3)
+```
+
+### 4/1 - Qual sua cidade e estado de origem?
+```{r}
+dados_quest$quest_1 %>%
+  filter(ID_pergunta == 4) %>%
+  count(Answer) %>%
+  datatable(options = list(pageLength = 18))
+```
+
+# Respostas 2
+
+## {.tabset}
+
+### 1/2 - Caso queria dar alguma sugestão ao Projeto escreva abaixo, caso contrario escreva não.
+```{r}
+dados_quest$quest_2 %>%
+  filter(ID_pergunta == 1) %>%
+  count(Answer) %>%
+  datatable(options = list(pageLength = 18))
+```
+
+### 2/2
+```{r}
+g4 <- 
+  dados_quest$quest_2 %>%
+  filter(ID_pergunta == 2) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Não fiz passeio" ~ 1,
+    Answer == "Desejo não responder" ~ 2,
+    Answer == "Fiz e achei justo" ~ 3,
+    Answer == "Fiz e achei barato" ~ 4,
+    Answer == "Fiz e achei caro" ~ 5,
+    TRUE ~ NA_real_)) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Você fez algum passeio de barco? O que você achou do valor do passeio de barco?") +
+  theme_minimal()
+
+ggplotly(g4)
+```
+
+### 3/2
+```{r}
+g5 <- 
+  dados_quest$quest_2 %>%
+  filter(ID_pergunta == 3) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Desejo não responder" ~ 1,
+    Answer == "Recebi informações, mas não achei de qualidade" ~ 2,
+    Answer == "Não recebi informação, mas gostaria de receber" ~ 3,
+    Answer == "Recebi informações e achei de qualidade" ~ 4,
+    TRUE ~ NA_real_)) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Você recebeu informações sobre a região durante o passeio de barco? Achou de qualidade?") +
+  theme_minimal()
+
+ggplotly(g5)
+```
+
+### 4/2
+```{r}
+g6 <- 
+  dados_quest$quest_2 %>%
+  filter(ID_pergunta == 4) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Desejo não responder" ~ 1,
+    Answer == "Condutor da embarcação me contou" ~ 2,
+    Answer == "Vi em um cartaz" ~ 3,
+    Answer == "Vi no app estouro" ~ 4,
+    Answer == "Ouvi numa palestra" ~ 5,
+    Answer == "Não fiquei sabendo sobre recomendações de conduta" ~ 6,
+    TRUE ~ NA_real_)) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Se você viu alguma recomendação de conduta para embarcações próximas de botos-cinza, onde viu essa informação?") +
+  theme_minimal()
+
+ggplotly(g6)
+```
+
+### 5/2
+```{r}
+g7 <- 
+  dados_quest$quest_2 %>%
+  filter(ID_pergunta == 5) %>%
+  mutate(ID_resposta = case_when(
+    Answer == "Desejo não responder" ~ 1,
+    Answer == "Não" ~ 2,
+    Answer == "Sim, parcialmente" ~ 3,
+    Answer == "Não sei avaliar" ~ 4,
+    Answer == "Sim, integralmente" ~ 5,
+    TRUE ~ NA_real_)) %>%
+  count(Answer, ID_resposta) %>%
+  ggplot(aes(x = n, y = reorder(Answer, ID_resposta))) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Frequência", y = "", title = "Você acha que recomendações de conduta foram seguidas no seu passeio?") +
+  theme_minimal()
+
+ggplotly(g7)
+```
+
+# Mapa
+
+```{r}
+# Criar um mapa Leaflet
+m <-
+  dados_trajetos %>%
+  group_by(ID_arquivo) %>%
+  st_cast('LINESTRING') %>%
+  leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron, group = "Mapa Vetorizado") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Satélite") %>%
+  addLayersControl(
+    baseGroups = c("Mapa Vetorizado", "Satélite"),
+    overlayGroups = unique(as.character(dados_trajetos$ID_arquivo)),
+    options = layersControlOptions(collapsed = FALSE)
+  ) %>%
+  hideGroup(unique(as.character(dados_trajetos$ID_arquivo)))
+
+# Adicionar trajetos por data
+for (ID_unico in unique(dados_trajetos$ID_arquivo)) {
+  trajeto_filtrado <- filter(dados_trajetos, ID_arquivo == ID_unico)
+  
+  m <- m %>%
+    addPolylines(data = trajeto_filtrado, lng = ~lng, lat = ~lat, weight = 2,
+                 group = as.character(ID_unico), color = "blue", opacity = 0.5,
+                 popup = ~paste("Usuário:", ID_user, "<br>Data:", Data))
+}
+
+# Exibir o mapa
+m
+
+```
+
