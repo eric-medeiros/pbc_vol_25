@@ -20,6 +20,7 @@ source(here("01_scripts", "le_trajetos.R"))
 
 caminho_pasta_excel <- here("00_data", "bruto", "Answers")
 caminho_pasta_rotas <- here("00_data", "bruto", "Rotas")
+caminho_export_rotas <- here("03_export")
 
 dados_quest <- le_excel(caminho_pasta_excel)
 dados_trajetos <- le_trajetos(caminho_pasta_rotas)
@@ -210,13 +211,10 @@ ggplotly(g7)
 ```
 
 # Mapa
-
 ```{r}
 # Criar um mapa Leaflet
 m <-
   dados_trajetos %>%
-  group_by(ID_arquivo) %>%
-  st_cast('LINESTRING') %>%
   leaflet() %>%
   addProviderTiles(providers$CartoDB.Positron, group = "Mapa Vetorizado") %>%
   addProviderTiles(providers$Esri.WorldImagery, group = "Satélite") %>%
@@ -242,3 +240,31 @@ m
 
 ```
 
+# Export
+```{r}
+dados_trajetos %>%
+  as_tibble() %>%
+  group_by(ID_arquivo) %>%
+  arrange(ID_arquivo, ID_ponto) %>%
+  select(Data, ID_arquivo, lng, lat) %>%
+  sfheaders::sf_linestring(
+    x = "lng",
+    y = "lat",
+    linestring_id = "ID_arquivo",
+    keep = TRUE,
+  ) %>%
+  st_set_crs(4326) %>%
+  st_write(
+    dsn = here(caminho_export_rotas, "rotas.gpkg"),
+    layer = "rotas",
+    quiet = TRUE,
+    append = FALSE
+  )
+
+
+dados_trajetos %>%
+  as_tibble() %>%
+  group_by(ID_arquivo, Data) %>%
+  count() %>%
+  View()
+```
