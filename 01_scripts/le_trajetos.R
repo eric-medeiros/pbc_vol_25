@@ -32,7 +32,9 @@ le_trajetos <- function(caminho_pasta_rotas) {
     map_dfr(lista_trajetos, le_arquivo_trajeto, .id = "ID_arquivo") %>%
     mutate(ID_arquivo = as.integer(ID_arquivo),
            Data = date(datahora)) %>%
-    arrange(datahora)
+    arrange(datahora) %>%
+    group_by(ID_arquivo) %>%
+    st_cast('LINESTRING')
 
   return(dados_trajetos)
 }
