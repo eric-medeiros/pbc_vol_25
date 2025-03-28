@@ -10,3 +10,6 @@
 
 # Ignora todos os arquivos HTML gerados na pasta 02_rmrkdwn
 /02_rmrkdwn/*.html
+
+# Ignora arquivos de rotas no export
+/03_export/rotas.gpkg
