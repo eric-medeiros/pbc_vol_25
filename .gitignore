@@ -4,3 +4,7 @@
 .httr-oauth
 .DS_Store
 .quarto
+
+#Arquivos do export do flexdashboard
+02_rmrkdwn/*.html
+
