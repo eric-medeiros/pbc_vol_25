@@ -1,10 +1,12 @@
-.Rproj.user
+# Diretórios e arquivos gerados pelo RStudio
+# Arquivos de configuração do projeto do RStudio
+.Rproj.user/
+
+# Histórico de comandos do R
 .Rhistory
-.Rdata
-.httr-oauth
-.DS_Store
-.quarto
 
-#Arquivos do export do flexdashboard
-02_rmrkdwn/*.html
+# Objetos salvos da sessão
+.RData
 
+# Ignora todos os arquivos HTML gerados na pasta 02_rmrkdwn
+/02_rmrkdwn/*.html
